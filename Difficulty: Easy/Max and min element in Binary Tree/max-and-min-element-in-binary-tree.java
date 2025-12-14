@@ -1,0 +1,28 @@
+/*
+class Node {
+    int data;
+    Node left, right;
+
+    public Node(int data){
+        this.data = data;
+    }
+}
+*/
+class Solution {
+    public static int findMax(Node root) {
+        // code here
+        if(root==null)  return Integer.MIN_VALUE;
+        // int leftMax=findMax(root.left);
+        // int rightMax=findMax(root.right);
+        return Math.max(root.data,Math.max(findMax(root.left),findMax(root.right)));
+    }
+
+    public static int findMin(Node root) {
+        
+        // code here
+        if(root==null)  return Integer.MAX_VALUE;
+        // int leftMin=findMin(root.left);
+        // int rightMin=findMin(root.right);
+        return Math.min(root.data,Math.min(findMin(root.left),findMin(root.right)));
+    }
+}
