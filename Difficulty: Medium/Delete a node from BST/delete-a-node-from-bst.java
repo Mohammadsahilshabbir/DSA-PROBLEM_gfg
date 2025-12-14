@@ -36,13 +36,11 @@ class Solution {
         }
             return root;
     }
-
-    // Helper function to find the minimum value node in a subtree
-    private Node findMin(Node node) {
+    public Node findMin(Node node) {
         while (node.left != null) {
             node = node.left;
         }
-        return node;
+        return node;    
 
     }
 }
